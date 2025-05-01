@@ -46,12 +46,12 @@ public class PapanLotre {
             for (int j = 0; j < COLS; j++) {
                 if (revealed[i][j]) {
                     if (data[i][j] == 1) {
-                        System.out.print("X ");  // Bom
+                        System.out.print("X ");  
                     } else {
-                        System.out.print("O ");  // Aman
+                        System.out.print("O ");  
                     }
                 } else {
-                    System.out.print("* ");      // Belum dibuka
+                    System.out.print("* ");   
                 }
             }
             System.out.println();
@@ -68,7 +68,7 @@ public class PapanLotre {
         revealed[row][col] = true;
 
         if (data[row][col] == 1) {
-            // Kena bom
+            
             board[row][col] = 'X';
             return false;
         } else {
@@ -97,10 +97,10 @@ public class PapanLotre {
                     safeRevealed++;
                 }
                 if (revealed[i][j] && data[i][j] == 1) {
-                    return true; // Kena bom = game over
+                    return true; 
                 }
             }
         }
-        return safeRevealed == 18; // Semua aman terbuka = menang
+        return safeRevealed == 18;
     }
 }
